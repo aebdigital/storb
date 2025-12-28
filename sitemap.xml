@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://falat.sk/</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- O nás Page -->
+    <url>
+        <loc>https://falat.sk/o-nas</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Galéria/References Page -->
+    <url>
+        <loc>https://falat.sk/galeria</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Kontakt Page -->
+    <url>
+        <loc>https://falat.sk/kontakt</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Category-specific gallery pages -->
+    <url>
+        <loc>https://falat.sk/galeria?filter=kuchynske-linky</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://falat.sk/galeria?filter=vstavane-skrine</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://falat.sk/galeria?filter=predsiene</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://falat.sk/galeria?filter=detske-izby</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://falat.sk/galeria?filter=kupelnove-skrinky</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://falat.sk/galeria?filter=rozne-projekty</loc>
+        <lastmod>2025-10-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>

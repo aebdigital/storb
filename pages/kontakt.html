@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Kontakt - STORB | Pezinok, Malokarpatská 11</title>
+    <meta name="description" content="Kontaktujte nás. STORB - Branislav Jajcaj. Malokarpatská 11, Pezinok. Tel: 0905 212 865, Email: branislav.jajcaj@gmail.com.">
+    <meta name="keywords" content="kontakt, STORB, Pezinok, Malokarpatská 11, stolárstvo Pezinok, cena nábytok">
+    <meta name="author" content="STORB">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="kontakt.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="kontakt.html">
+    <meta property="og:title" content="Kontakt - STORB">
+    <meta property="og:description" content="Kontaktujte nás. STORB - Branislav Jajcaj. Malokarpatská 11, Pezinok. Tel: 0905 212 865">
+    <meta property="og:image" content="../sources/kuchynske%20linky/04ba3afc-4227-4d9f-9b9e-fb15e2ecc4b0.JPG">
+    <meta property="og:locale" content="sk_SK">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="kontakt.html">
+    <meta property="twitter:title" content="Kontakt - STORB">
+    <meta property="twitter:description" content="Kontaktujte nás. STORB - Branislav Jajcaj. Malokarpatská 11, Pezinok. Tel: 0905 212 865">
+    <meta property="twitter:image" content="../sources/kuchynske%20linky/04ba3afc-4227-4d9f-9b9e-fb15e2ecc4b0.JPG">
+
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="../css/base.css?v=12.0">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../css/components/header.css?v=12.0">
+    <link rel="stylesheet" href="../css/components/footer.css?v=12.0">
+    <link rel="stylesheet" href="../css/components/hero.css?v=12.0">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="../css/kontakt.css?v=12.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+    <!-- GSAP for button animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader"></div>
+
+    <!-- Navigation Container -->
+    <div id="navigation-container"></div>
+    
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-bg">
+            <img src="../sources/vstavane skrine/045a2c91-ef3a-4aae-bc1e-c43e8e0ed06b.JPG" alt="STORB kontakt">
+        </div>
+        <div class="contact-hero-content">
+            <div class="container">
+                <h1 class="contact-hero-title">Kontakt</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-content">
+        <div class="contact-layout">
+            <!-- Contact Info Left -->
+            <div class="contact-info-left">
+                <h2>Máte otázky?</h2>
+                <p class="contact-subtitle">Kontaktujte nás.</p>
+
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <strong>Branislav Jajcaj</strong><br>
+                        <strong>STORB</strong>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <strong>Malokarpatská 11</strong><br>
+                        <strong>902 01 Pezinok</strong>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <strong>Telefón:</strong> <a href="tel:+421905212865">+421 905 212 865</a>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <strong>E-mail:</strong> <a href="mailto:branislav.jajcaj@gmail.com">branislav.jajcaj@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <div class="social-icons">
+                        <a href="mailto:branislav.jajcaj@gmail.com" class="social-icon-email">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Right -->
+            <div class="contact-form-right">
+                <h3>Napíšte nám o vašom projekte</h3>
+                <form class="contact-form-new" id="contact-form">
+                    <input type="text" placeholder="Vaše meno" required>
+                    <input type="email" placeholder="Váš email" required>
+                    <input type="tel" placeholder="Váš telefón">
+                    <textarea placeholder="Vaša správa" rows="6" required></textarea>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="privacy-checkbox" required>
+                        <label for="privacy-checkbox">Týmto formulárom súhlasite s našimi podmienkami a <a href="#" onclick="openPrivacyPopup(); return false;" class="privacy-link">ochranou osobných údajov</a>.</label>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Odoslať</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-marker">
+                <div class="marker-icon">▲</div>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.5!2d17.2667!3d48.2833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMalokarpatsk%C3%A1+11%2C+902+01+Pezinok!5e0!3m2!1sen!2ssk!4v1640995200000!5m2!1sen!2ssk"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Main JavaScript -->
+    <script type="module" src="../js/main.js?v=12.0"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+# Robots.txt for FALAT FAM, s.r.o.
+# https://falat.sk
+
+User-agent: *
+Allow: /
+
+# Disallow access to admin/config areas if any
+Disallow: /cgi-bin/
+Disallow: /.git/
+Disallow: /.htaccess
+
+# Allow CSS and JS files for Google
+Allow: /css/
+Allow: /js/
+Allow: /sources/
+
+# Sitemap
+Sitemap: https://falat.sk/sitemap.xml
+
+# Crawl delay (optional, adjust if needed)
+# Crawl-delay: 10
+
+# Specific rules for different bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /sources/
+
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
