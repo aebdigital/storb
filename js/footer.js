@@ -79,7 +79,7 @@ function loadFooter() {
                         <div class="footer-logo">
                             <span class="footer-logo-text">STORB</span>
                         </div>
-                        <p class="footer-description">Výroba a montáž nábytku na mieru v Pezinku. Kvalitné riešenia pre domácnosti a firmy.</p>
+                        <p class="footer-description">Výroba drevených schodíšť a zábradlí na mieru od roku 1986. Kvalitné remeselné spracovanie.</p>
                     </div>
 
                     <!-- Navigation -->
@@ -87,7 +87,6 @@ function loadFooter() {
                         <h4 class="footer-heading">Navigácia</h4>
                         <nav class="footer-nav">
                             <a href="${basePath}index.html">Domov</a>
-                            <a href="${pagesPath}o-nas.html">O nás</a>
                             <a href="${pagesPath}referencie.html">Galéria</a>
                             <a href="${pagesPath}kontakt.html">Kontakt</a>
                         </nav>
@@ -95,14 +94,12 @@ function loadFooter() {
 
                     <!-- Services -->
                     <div class="footer-column">
-                        <h4 class="footer-heading">Naše služby</h4>
+                        <h4 class="footer-heading">Naše produkty</h4>
                         <nav class="footer-nav">
-                            <a href="${pagesPath}referencie.html?filter=kuchynske-linky">Kuchynské linky</a>
-                            <a href="${pagesPath}referencie.html?filter=vstavane-skrine">Vstavané skrine</a>
-                            <a href="${pagesPath}referencie.html?filter=predsiene">Predsiene</a>
-                            <a href="${pagesPath}referencie.html?filter=detske-izby">Detské izby</a>
-                            <a href="${pagesPath}referencie.html?filter=kupelnove-skrinky">Kúpeľňové skrinky</a>
-                            <a href="${pagesPath}referencie.html?filter=rozne-projekty">Rôzne projekty</a>
+                            <a href="${pagesPath}referencie.html">Priame schodištia</a>
+                            <a href="${pagesPath}referencie.html">Točité schodištia</a>
+                            <a href="${pagesPath}referencie.html">Oblúkové schodištia</a>
+                            <a href="${pagesPath}referencie.html">Drevené zábradlia</a>
                         </nav>
                     </div>
 

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Kontakt - STORB | Pezinok, Malokarpatská 11</title>
-    <meta name="description" content="Kontaktujte nás. STORB - Branislav Jajcaj. Malokarpatská 11, Pezinok. Tel: 0905 212 865, Email: branislav.jajcaj@gmail.com.">
-    <meta name="keywords" content="kontakt, STORB, Pezinok, Malokarpatská 11, stolárstvo Pezinok, cena nábytok">
+    <title>Kontakt - STORB | Drevené schodištia Pezinok</title>
+    <meta name="description" content="Kontaktujte nás. STORB - Branislav Jajcaj. Výroba drevených schodíšť a zábradlí. Malokarpatská 11, Pezinok. Tel: 0905 212 865.">
+    <meta name="keywords" content="kontakt, STORB, Pezinok, drevené schodištia, zábradlia, stolárstvo Pezinok, cenová ponuka schodište">
     <meta name="author" content="STORB">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="kontakt.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="kontakt.html">
-    <meta property="og:title" content="Kontakt - STORB">
-    <meta property="og:description" content="Kontaktujte nás. STORB - Branislav Jajcaj. Malokarpatská 11, Pezinok. Tel: 0905 212 865">
+    <meta property="og:title" content="Kontakt - STORB | Drevené schodištia">
+    <meta property="og:description" content="Kontaktujte nás pre cenovú ponuku na drevené schodištia a zábradlia. STORB - Branislav Jajcaj, Pezinok.">
     <meta property="og:image" content="../sources/490092453_1503382510939376_2109055305134055658_n.jpg">
     <meta property="og:locale" content="sk_SK">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="kontakt.html">
-    <meta property="twitter:title" content="Kontakt - STORB">
-    <meta property="twitter:description" content="Kontaktujte nás. STORB - Branislav Jajcaj. Malokarpatská 11, Pezinok. Tel: 0905 212 865">
+    <meta property="twitter:title" content="Kontakt - STORB | Drevené schodištia">
+    <meta property="twitter:description" content="Kontaktujte nás pre cenovú ponuku na drevené schodištia a zábradlia. STORB - Branislav Jajcaj, Pezinok.">
     <meta property="twitter:image" content="../sources/490092453_1503382510939376_2109055305134055658_n.jpg">
 
     <link rel="stylesheet" href="../css/fonts.css">
@@ -112,6 +112,9 @@
     <!-- Map Section -->
     <section class="map-section">
         <div class="map-container">
+            <div class="map-overlay" id="map-overlay">
+                <span class="map-overlay-text">Pre interakciu s mapou kliknite</span>
+            </div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.5!2d17.2667!3d48.2833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMalokarpatsk%C3%A1+11%2C+902+01+Pezinok!5e0!3m2!1sen!2ssk!4v1640995200000!5m2!1sen!2ssk"
                 width="100%"
@@ -129,5 +132,29 @@
 
     <!-- Main JavaScript -->
     <script type="module" src="../js/main.js?v=12.0"></script>
+
+    <!-- Map Overlay Interaction -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mapOverlay = document.getElementById('map-overlay');
+            const mapContainer = document.querySelector('.map-container');
+
+            if (mapOverlay && mapContainer) {
+                // Click overlay to enable map interaction
+                mapOverlay.addEventListener('click', function() {
+                    mapOverlay.classList.add('hidden');
+                    mapContainer.classList.add('map-active');
+                });
+
+                // Click outside map to restore overlay
+                document.addEventListener('click', function(e) {
+                    if (!mapContainer.contains(e.target)) {
+                        mapOverlay.classList.remove('hidden');
+                        mapContainer.classList.remove('map-active');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

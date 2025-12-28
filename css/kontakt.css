@@ -18,9 +18,47 @@
     transition: filter 0.3s ease;
 }
 
+.map-container:not(.map-active) iframe {
+    pointer-events: none;
+}
+
+.map-container.map-active iframe {
+    filter: grayscale(0%);
+}
+
 .map-container iframe:hover,
 .map-container:hover iframe {
     filter: grayscale(0%);
+}
+
+/* Map Overlay */
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.map-overlay.hidden {
+    display: none;
+}
+
+.map-overlay-text {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    pointer-events: none;
 }
 
 /* Contact Content Layout */
