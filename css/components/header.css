@@ -105,11 +105,13 @@
     display: flex;
     list-style: none;
     gap: 40px;
-    margin-left: 0;
+    margin: 0 auto;
+    justify-content: center;
+    flex: 1;
 }
 
 .nav-cta {
-    margin-left: auto;
+    margin-left: 0;
 }
 
 .nav-cta-btn {

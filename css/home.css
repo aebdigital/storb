@@ -7,7 +7,7 @@
     height: 90vh;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     color: white;
     z-index: 0;
 }
@@ -35,9 +35,9 @@
         position: fixed;
         height: 90vh !important;
         overflow: hidden;
-        /* Align content to bottom on mobile */
+        /* Align content to center on mobile */
         display: flex;
-        align-items: flex-end;
+        align-items: center;
     }
     
     .hero-bg-image {
@@ -100,26 +100,29 @@
 .hero-content {
     max-width: 95%;
     margin: 0 auto;
-    padding: 0 20px 60px;
+    padding: 0 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    gap: 60px;
+    gap: 30px;
+    text-align: center;
 }
 
 .hero-text {
     flex: 1;
-    max-width: 700px;
+    max-width: 800px;
+    text-align: center;
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 20px;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    max-width: 680px;
+    max-width: 100%;
 }
 
 /* Hero Text Slider */
@@ -190,6 +193,7 @@
 .hero-actions {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 .cta-btn {
@@ -1476,7 +1480,7 @@
     }
 
     .hero-title {
-        font-size: 2.86rem;
+        font-size: 3rem;
     }
 
     .stat-number {
@@ -1485,7 +1489,7 @@
 
     .hero-text {
         width: 100%;
-        text-align: left;
+        text-align: center;
     }
 
     .about-image {

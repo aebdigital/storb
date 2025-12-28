@@ -12,66 +12,75 @@ function initPortfolioFunctionality() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-    if (!filterButtons.length || !portfolioItems.length) {
+    if (!portfolioItems.length) {
         return; // Elements not found, probably not on portfolio page
     }
 
-    // Check for URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const filterParam = urlParams.get('filter');
+    // If there are filter buttons, use category filtering
+    if (filterButtons.length) {
+        // Check for URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const filterParam = urlParams.get('filter');
 
-    // Determine initial filter (from URL or default to kuchynske-linky)
-    const initialFilter = filterParam || 'kuchynske-linky';
+        // Determine initial filter (from URL or default to first button)
+        const initialFilter = filterParam || filterButtons[0]?.getAttribute('data-filter');
 
-    // Show items based on initial filter
-    portfolioItems.forEach(item => {
-        const category = item.getAttribute('data-category');
-        if (category === initialFilter) {
+        // Show items based on initial filter
+        portfolioItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            if (category === initialFilter) {
+                item.classList.remove('hidden');
+                item.style.display = 'block';
+            } else {
+                item.classList.add('hidden');
+                item.style.display = 'none';
+            }
+        });
+
+        // Set active button based on initial filter
+        filterButtons.forEach(button => {
+            const buttonFilter = button.getAttribute('data-filter');
+            if (buttonFilter === initialFilter) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
+        // Add click event listeners to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Filter portfolio items
+                portfolioItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (category === filter) {
+                        item.classList.remove('hidden');
+                        item.style.display = 'block';
+                    } else {
+                        item.classList.add('hidden');
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Update visible images for lightbox
+                updateVisibleImages();
+            });
+        });
+    } else {
+        // No filter buttons - show all items
+        portfolioItems.forEach(item => {
             item.classList.remove('hidden');
             item.style.display = 'block';
-        } else {
-            item.classList.add('hidden');
-            item.style.display = 'none';
-        }
-    });
-
-    // Set active button based on initial filter
-    filterButtons.forEach(button => {
-        const buttonFilter = button.getAttribute('data-filter');
-        if (buttonFilter === initialFilter) {
-            button.classList.add('active');
-        } else {
-            button.classList.remove('active');
-        }
-    });
-    
-    // Add click event listeners to filter buttons
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Filter portfolio items
-            portfolioItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                if (category === filter) {
-                    item.classList.remove('hidden');
-                    item.style.display = 'block';
-                } else {
-                    item.classList.add('hidden');
-                    item.style.display = 'none';
-                }
-            });
-            
-            // Update visible images for lightbox
-            updateVisibleImages();
         });
-    });
-    
+    }
+
     // Initialize lightbox functionality
     initLightbox();
 }
@@ -117,14 +126,14 @@ function openLightbox(img) {
     updateVisibleImages();
     if (typeof window !== 'undefined') {
         window.currentImageIndex = window.visibleImages.indexOf(img);
-        
+
         const lightbox = document.getElementById('lightbox');
         const lightboxImage = document.getElementById('lightbox-image');
-        
+
         if (lightbox && lightboxImage) {
             lightboxImage.src = img.src;
             lightboxImage.alt = img.alt;
-            lightbox.style.display = 'flex';
+            lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
     }
@@ -133,29 +142,55 @@ function openLightbox(img) {
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     if (lightbox) {
-        lightbox.style.display = 'none';
+        lightbox.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
 }
 
 function nextImage() {
     if (typeof window !== 'undefined' && window.visibleImages && window.visibleImages.length > 0) {
-        window.currentImageIndex = (window.currentImageIndex + 1) % window.visibleImages.length;
         const lightboxImage = document.getElementById('lightbox-image');
-        if (lightboxImage && window.visibleImages[window.currentImageIndex]) {
-            lightboxImage.src = window.visibleImages[window.currentImageIndex].src;
-            lightboxImage.alt = window.visibleImages[window.currentImageIndex].alt;
+        if (lightboxImage && window.visibleImages.length > 1) {
+            // Add slide out animation
+            lightboxImage.classList.add('slide-left');
+
+            setTimeout(() => {
+                window.currentImageIndex = (window.currentImageIndex + 1) % window.visibleImages.length;
+                if (window.visibleImages[window.currentImageIndex]) {
+                    lightboxImage.src = window.visibleImages[window.currentImageIndex].src;
+                    lightboxImage.alt = window.visibleImages[window.currentImageIndex].alt;
+                }
+                lightboxImage.classList.remove('slide-left');
+                lightboxImage.classList.add('slide-in-left');
+
+                setTimeout(() => {
+                    lightboxImage.classList.remove('slide-in-left');
+                }, 400);
+            }, 300);
         }
     }
 }
 
 function previousImage() {
     if (typeof window !== 'undefined' && window.visibleImages && window.visibleImages.length > 0) {
-        window.currentImageIndex = (window.currentImageIndex - 1 + window.visibleImages.length) % window.visibleImages.length;
         const lightboxImage = document.getElementById('lightbox-image');
-        if (lightboxImage && window.visibleImages[window.currentImageIndex]) {
-            lightboxImage.src = window.visibleImages[window.currentImageIndex].src;
-            lightboxImage.alt = window.visibleImages[window.currentImageIndex].alt;
+        if (lightboxImage && window.visibleImages.length > 1) {
+            // Add slide out animation
+            lightboxImage.classList.add('slide-right');
+
+            setTimeout(() => {
+                window.currentImageIndex = (window.currentImageIndex - 1 + window.visibleImages.length) % window.visibleImages.length;
+                if (window.visibleImages[window.currentImageIndex]) {
+                    lightboxImage.src = window.visibleImages[window.currentImageIndex].src;
+                    lightboxImage.alt = window.visibleImages[window.currentImageIndex].alt;
+                }
+                lightboxImage.classList.remove('slide-right');
+                lightboxImage.classList.add('slide-in-right');
+
+                setTimeout(() => {
+                    lightboxImage.classList.remove('slide-in-right');
+                }, 400);
+            }, 300);
         }
     }
 }

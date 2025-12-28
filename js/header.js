@@ -65,6 +65,7 @@ function loadNavigation() {
                     <li><a href="${basePath}pages/o-nas.html" class="nav-link">O nás</a></li>
                     <li><a href="${basePath}pages/referencie.html" class="nav-link">Galéria</a></li>
                     <li><a href="${basePath}pages/kontakt.html" class="nav-link">Kontakt</a></li>
+                    <li><a href="https://www.facebook.com/dreveneschodiste/" class="nav-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                 </ul>
                 <div class="nav-cta">
                     <a href="tel:+421905212865" class="nav-cta-btn btn_default_wrap">
@@ -95,6 +96,7 @@ function loadNavigation() {
                 <li><a href="${basePath}pages/o-nas.html" class="mobile-nav-link">O nás</a></li>
                 <li><a href="${basePath}pages/referencie.html" class="mobile-nav-link">Galéria</a></li>
                 <li><a href="${basePath}pages/kontakt.html" class="mobile-nav-link">Kontakt</a></li>
+                <li><a href="https://www.facebook.com/dreveneschodiste/" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>
             </ul>
             <div class="mobile-cta">
                 <a href="tel:+421905212865" class="mobile-cta-btn">+421 905 212 865</a>
