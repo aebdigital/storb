@@ -62,12 +62,15 @@ function loadNavigation() {
                 </div>
                 <ul class="nav-menu">
                     <li><a href="${homeLink}" class="nav-link">Úvod</a></li>
-                    <li><a href="${basePath}pages/o-nas.html" class="nav-link">O nás</a></li>
                     <li><a href="${basePath}pages/referencie.html" class="nav-link">Galéria</a></li>
                     <li><a href="${basePath}pages/kontakt.html" class="nav-link">Kontakt</a></li>
-                    <li><a href="https://www.facebook.com/dreveneschodiste/" class="nav-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                 </ul>
                 <div class="nav-cta">
+                    <a href="https://www.facebook.com/dreveneschodiste/" class="nav-facebook-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
                     <a href="tel:+421905212865" class="nav-cta-btn btn_default_wrap">
                         <div class="btn_default_contain">
                             <div class="btn_default_text" data-label="+421 905 212 865" data-alt="+421 905 212 865"></div>
@@ -93,12 +96,15 @@ function loadNavigation() {
             </div>
             <ul class="mobile-nav-menu">
                 <li><a href="${homeLink}" class="mobile-nav-link">Úvod</a></li>
-                <li><a href="${basePath}pages/o-nas.html" class="mobile-nav-link">O nás</a></li>
                 <li><a href="${basePath}pages/referencie.html" class="mobile-nav-link">Galéria</a></li>
                 <li><a href="${basePath}pages/kontakt.html" class="mobile-nav-link">Kontakt</a></li>
-                <li><a href="https://www.facebook.com/dreveneschodiste/" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>
             </ul>
             <div class="mobile-cta">
+                <a href="https://www.facebook.com/dreveneschodiste/" class="mobile-facebook-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
                 <a href="tel:+421905212865" class="mobile-cta-btn">+421 905 212 865</a>
             </div>
         </div>
